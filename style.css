@@ -1,4 +1,4 @@
-header {
+header, footer {
 	height: 60px;
 }
 
@@ -16,21 +16,27 @@ header {
 	align-items: center;	
 }
 
-.menu-buttons>li {
+.menu-buttons>li, .footer-buttons>li {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
-.menu-buttons>li>a{
+.menu-buttons>li>a, .footer-buttons>li>a {
 	text-decoration: none;
 	color: black;
 	text-transform: uppercase;
 }
 
-.menu-buttons>li:hover, .menu-buttons>li:hover>a {
-	background-color: black;
-	color: white;
+.menu-buttons>li>a:hover, .footer-buttons>li>a:hover {
+    background-color: black;
+    color: #ffcc00;
 }
+
+}.menu-buttons>li>a, .footer-buttons>li>a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 ul.flex-center {
 	width: 300px;
