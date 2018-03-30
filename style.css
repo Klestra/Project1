@@ -6,6 +6,27 @@ header, footer {
 	height: 60px;
 	background-color: #3C517F;
 	color: white;
+	border: 1px solid black;
+}
+
+body {	
+	background-image: url("./site>Pattern.png");
+}
+
+main {
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
+.position-fixed {
+	position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.link-no-style {
+	text-decoration: none;
+	color: inherit;
 }
 
 #logo-title {
@@ -17,8 +38,22 @@ header, footer {
 	text-align: justify;
 }
 
+.base-card {
+	padding: 30px;
+    margin: 20px;
+    -webkit-box-shadow: 1px 6px 3px 2px #3C517F;
+	-moz-box-shadow: 1px 6px 3px 2px #3C517F;
+	box-shadow: 0px 5px 25px 6px #3C517F;
+	background-image: url("./cardPattern.png");
+	border: 1px solid #3C517F;
+}
+
 .full-height {
 	height: 100%;
+}
+
+.full-width {
+	width: 90%;
 }
 
 .image-container {
@@ -30,12 +65,18 @@ header, footer {
 	height: auto;
 }
 
-
+.rounded-image {
+	border-radius: 8px;
+}
 
 .flex-base {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+.flex-row-alternate {
+	flex-direction: row-reverse;
 }
 
 .flex-center {
