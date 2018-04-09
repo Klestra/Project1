@@ -27,18 +27,36 @@ let score = 0;
 
 document.getElementById('score').innerHTML = score;
 
+//Function game over
+function gameOver(divs) {
+   let gameOverStatus = true;
+   if (score >= 5){
+       gameOverStatus = true;
+   } else {
+       for(let i = 0; i < divs.length; i++) {
+           if(divs[i].classList.contains('red-color')){
+               gameOverStatus = false;
+               break;
+           }
+       }
+   }
+   if(gameOverStatus){
+       setTimeout(function(){
+           alert('Vous avez perdu');
+           refresh();
+       }, 500);
+   }
+};
 
-function gameOver(div) {
-  if (score > 5) {
-    alert('Vous avez perdu');
-  } else {
-    for(let i = 0; divs.length; i++) {
-      if(divs[i].classList.contains('green-color')) {
-        victoryStatus = false;
-      }
-    }
-  }
-}
+function refresh(){
+   setTimeout(function(){
+       for(let i = 0; i < childDivs.length; i++){
+           buttonRestart(childDivs[i]);
+           score = 0;
+           document.getElementById('score').innerHTML = score;
+       }
+   }, 500);
+};
 
 //Function for restart the game
 function buttonRestart(div) {
